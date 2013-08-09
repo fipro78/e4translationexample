@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Translation Fragment
+Bundle-SymbolicName: com.beone.e4.translation.fragment
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: com.beone.e4.translation;bundle-version="1.0.0.qualifier"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Localization: OSGI-INF/l10n/fragment_bundle

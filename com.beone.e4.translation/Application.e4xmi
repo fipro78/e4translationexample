@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_pliMEEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ide.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_pliMEUBtEeK0SbdJCOFnRw" label="%application" width="800" height="600">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_Hy6vsEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.3" horizontal="true">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_N97LUEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.0">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_RLTtUEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.1" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_Vngy4EB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.0">
+            <children xsi:type="basic:Part" xmi:id="_WeHqwEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.0" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.OsgiExample" label="OSGi Bundle ResourceBundle"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_WJ-mwEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.1">
+            <children xsi:type="basic:Part" xmi:id="_W13cYEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.1" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.NamedExample" label="Named ResourceBundle"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_Qzy6UEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.4">
+            <children xsi:type="basic:Part" xmi:id="_Rqt7QEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.4" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.PluginExample" label="Plugin ResourceBundle"/>
+          </children>
+        </children>
+        <children xsi:type="basic:PartSashContainer" xmi:id="_QAaLAEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.2" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_Rdz9IEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.2">
+            <children xsi:type="basic:Part" xmi:id="_QvbNIEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.2" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.LocationExample" label="Location ResourceBundle"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_Sd6IMEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.3">
+            <children xsi:type="basic:Part" xmi:id="_S0dnAEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.3" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.ImplementationExample" label="Implementation ResourceBundle"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_Lz1tcEKoEeK83uHYmuE7sQ" elementId="com.beone.e4.translation.partstack.5">
+            <children xsi:type="basic:Part" xmi:id="_MkiKkEKoEeK83uHYmuE7sQ" elementId="com.beone.e4.translation.part.5" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.FragmentExample" label="Fragment ResourceBundle"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_WdKV4KgcEeK5kJWEPbQIog" elementId="com.beone.e4.translation.menu.0"/>
+    <trimBars xmi:id="_jN3TIKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_oGOJMKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.toolbar.0">
+        <children xsi:type="menu:ToolControl" xmi:id="_pUO0cKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.toolcontrol.0" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.control.LocaleChangeItem"/>
+      </children>
+    </trimBars>
+  </children>
+  <addons xmi:id="_pliMEkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_pliME0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_pliMFEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_pliMFUBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_pliMFkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_pliMF0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
