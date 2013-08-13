@@ -20,7 +20,7 @@ public class FragmentExample {
 
 	@Inject
 	public FragmentExample(Composite parent) {
-		myFirstLabel = new Label(parent, SWT.NONE);
+		myFirstLabel = new Label(parent, SWT.WRAP);
 		mySecondLabel = new Label(parent, SWT.NONE);
 		myThirdLabel = new Label(parent, SWT.NONE);
 	}

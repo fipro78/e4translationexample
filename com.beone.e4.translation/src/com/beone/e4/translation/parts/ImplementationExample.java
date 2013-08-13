@@ -20,7 +20,7 @@ public class ImplementationExample {
 
 	@Inject
 	public ImplementationExample(Composite parent) {
-		myFirstLabel = new Label(parent, SWT.NONE);
+		myFirstLabel = new Label(parent, SWT.WRAP);
 		mySecondLabel = new Label(parent, SWT.NONE);
 		myThirdLabel = new Label(parent, SWT.NONE);
 	}
