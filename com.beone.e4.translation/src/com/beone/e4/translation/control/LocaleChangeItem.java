@@ -2,10 +2,8 @@ package com.beone.e4.translation.control;
 
 import javax.inject.Inject;
 
-import org.eclipse.e4.core.contexts.IEclipseContext;
-import org.eclipse.e4.core.services.translation.TranslationService;
-import org.eclipse.e4.tools.services.Translation;
-import org.eclipse.e4.ui.model.application.MApplication;
+import org.eclipse.e4.core.services.nls.ILocaleChangeService;
+import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
@@ -29,17 +27,17 @@ public class LocaleChangeItem {
 	Button button;
 	
 	@Inject
-	public LocaleChangeItem(
-			Composite parent, final MApplication mApplication) {
+	ILocaleChangeService lcs;
+	
+	@Inject
+	public LocaleChangeItem(Composite parent) {
 		
 		final Text input = new Text(parent, SWT.BORDER);
 		input.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				if (e.keyCode == 13) {
-					updateLocale(
-							mApplication.getContext().getParent(),
-							input.getText());
+					lcs.changeApplicationLocale(input.getText());
 				}
 			}
 		});
@@ -48,29 +46,13 @@ public class LocaleChangeItem {
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				updateLocale(
-						mApplication.getContext().getParent(),
-						input.getText());
+				lcs.changeApplicationLocale(input.getText());
 			};
 		});
 	}
 
-	/**
-	 * Set the new locale String to the OSGi context.
-	 * @param context The OSGi context to set the locale 
-	 * 			String to. This is the parent of the
-	 * 			application context. 
-	 * @param input The new locale String to set.
-	 */
-	private void updateLocale( 
-			IEclipseContext context, String input) {
-		
-		context.set(TranslationService.LOCALE, input);
-	}
-	
 	@Inject
 	public void translate(@Translation OsgiMessages messages) {
-		LocalizationHelper.updateButtonText(
-				button, messages.button_change_locale);
+		LocalizationHelper.updateButtonText(button, messages.button_change_locale);
 	}
 }

@@ -1,10 +1,15 @@
 package com.beone.e4.translation.parts;
 
+import java.util.Locale;
+
 import javax.inject.Inject;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
-import org.eclipse.e4.tools.services.Translation;
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.core.services.nls.ILocaleChangeService;
+import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
@@ -36,9 +41,9 @@ public class OsgiExample {
 	@Inject
 	public void translate(@Translation OsgiMessages messages) {
 		LocalizationHelper.updateLabelText(
-				myFirstLabel, messages.first_label_message);
+				myFirstLabel, messages.firstLabelMessage);
 		LocalizationHelper.updateLabelText(
-				mySecondLabel, messages.second_label_message);
+				mySecondLabel, messages.secondLabelMessage);
 		LocalizationHelper.updateLabelText(
 				myThirdLabel, messages.third_label_message);
 	}
@@ -49,4 +54,10 @@ public class OsgiExample {
 			myFirstLabel.setFocus();
 		}
 	}
+	
+	@Inject
+	@Optional
+	private void getNotified(@UIEventTopic(ILocaleChangeService.LOCALE_CHANGE) Locale s) {
+		System.out.println(s);
+	} 
 }

@@ -6,13 +6,13 @@ import javax.annotation.PostConstruct;
 
 public class OsgiMessages {
 
-	public String first_label_message;
-	public String second_label_message;
+	public String firstLabelMessage;
+	public String secondLabelMessage;
 	public String third_label_message;
 	public String button_change_locale;
 	
 	@PostConstruct
 	public void format() {
-		first_label_message = MessageFormat.format(first_label_message, "OSGi ResourceBundles"); //$NON-NLS-1$
+		firstLabelMessage = MessageFormat.format(firstLabelMessage, "OSGi ResourceBundles"); //$NON-NLS-1$
 	}
 }

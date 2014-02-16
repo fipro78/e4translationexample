@@ -3,7 +3,7 @@ package com.beone.e4.translation.parts;
 
 import javax.inject.Inject;
 
-import org.eclipse.e4.tools.services.Translation;
+import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;

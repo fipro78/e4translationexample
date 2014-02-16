@@ -3,13 +3,14 @@ package com.beone.e4.translation.parts;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-import org.eclipse.e4.tools.services.Translation;
+import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 import com.beone.e4.translation.LocalizationHelper;
+import com.beone.e4.translation.named.Messages;
 import com.beone.e4.translation.named.NamedMessages;
 
 /**
@@ -26,29 +27,36 @@ public class NamedExample {
 	private Label myFirstLabel;
 	private Label mySecondLabel;
 	private Label myThirdLabel;
+	
+	private Label myCustomLabel;
 
 	@PostConstruct
-	public void postConstruct(Composite parent, @Translation NamedMessages messages) {
+	public void postConstruct(Composite parent, @Translation NamedMessages messages, @Translation Messages m) {
 		myFirstLabel = new Label(parent, SWT.WRAP);
 		mySecondLabel = new Label(parent, SWT.NONE);
 		myThirdLabel = new Label(parent, SWT.NONE);
+		
+		myCustomLabel = new Label(parent, SWT.NONE);
 		
 		//As the method annotated with @PostConstruct is created after method
 		//injection, the translate() method won't be called automatically
 		//here. This would result in an empty UI. So we need to call the
 		//translate() method here manually to make everything work as intended.
-		translate(messages);
+		translate(messages, m);
 	}
 	
 	//the method that will perform the dynamic locale changes
 	@Inject
-	public void translate(@Translation NamedMessages messages) {
+	public void translate(@Translation NamedMessages messages, @Translation Messages m) {
 		LocalizationHelper.updateLabelText(
 				myFirstLabel, messages.first_label_message);
 		LocalizationHelper.updateLabelText(
 				mySecondLabel, messages.second_label_message);
 		LocalizationHelper.updateLabelText(
 				myThirdLabel, messages.third_label_message);
+
+		LocalizationHelper.updateLabelText(
+				myCustomLabel, m.customMessage);
 	}
 	
 	@Focus

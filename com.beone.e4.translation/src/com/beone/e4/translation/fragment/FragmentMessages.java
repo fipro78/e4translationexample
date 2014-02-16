@@ -4,7 +4,7 @@ import java.text.MessageFormat;
 
 import javax.annotation.PostConstruct;
 
-import org.eclipse.e4.tools.services.Message;
+import org.eclipse.e4.core.services.nls.Message;
 
 @Message(contributorURI="platform:/fragment/com.beone.e4.translation.fragment")
 public class FragmentMessages {

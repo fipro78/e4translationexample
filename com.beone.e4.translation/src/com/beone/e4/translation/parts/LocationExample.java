@@ -2,7 +2,7 @@ package com.beone.e4.translation.parts;
 
 import javax.inject.Inject;
 
-import org.eclipse.e4.tools.services.Translation;
+import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.swt.SWT;
@@ -34,11 +34,6 @@ public class LocationExample {
 		LocalizationHelper.updateLabelText(myFirstLabel, messages.first_label_message);
 		LocalizationHelper.updateLabelText(mySecondLabel, messages.second_label_message);
 		LocalizationHelper.updateLabelText(myThirdLabel, messages.third_label_message);
-		
-		//also update the part
-		if (part != null) {
-			part.setLabel(messages.part_title);
-		}
 	}
 	
 	@Focus

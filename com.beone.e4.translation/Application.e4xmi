@@ -5,35 +5,59 @@
       <children xsi:type="basic:PartSashContainer" xmi:id="_N97LUEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.0">
         <children xsi:type="basic:PartSashContainer" xmi:id="_RLTtUEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.1" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_Vngy4EB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.0">
-            <children xsi:type="basic:Part" xmi:id="_WeHqwEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.0" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.OsgiExample" label="OSGi Bundle ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_WeHqwEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.0" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.OsgiExample" label="%osgi.part.title" tooltip="%osgi.part.tooltip">
+              <menus xmi:id="_unruYF2xEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.menu.5" label="%osgi.part.viewmenu.label">
+                <tags>ViewMenu</tags>
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_vjBVQF2xEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.6" label="%osgi.part.viewmenu.command.label" command="_i-c24F2wEeO9v_Lq7wc4oQ"/>
+              </menus>
+            </children>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_WJ-mwEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.1">
-            <children xsi:type="basic:Part" xmi:id="_W13cYEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.1" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.NamedExample" label="Named ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_W13cYEB3EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.1" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.NamedExample" label="%named.part.title"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_Qzy6UEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.4">
-            <children xsi:type="basic:Part" xmi:id="_Rqt7QEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.4" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.PluginExample" label="Plugin ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_Rqt7QEB5EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.4" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.PluginExample" label="%plugin.part.title"/>
           </children>
         </children>
         <children xsi:type="basic:PartSashContainer" xmi:id="_QAaLAEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partsashcontainer.2" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_Rdz9IEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.2">
-            <children xsi:type="basic:Part" xmi:id="_QvbNIEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.2" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.LocationExample" label="Location ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_QvbNIEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.2" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.LocationExample" label="%location.part.title"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_Sd6IMEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.partstack.3">
-            <children xsi:type="basic:Part" xmi:id="_S0dnAEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.3" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.ImplementationExample" label="Implementation ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_S0dnAEB4EeK0SbdJCOFnRw" elementId="com.beone.e4.translation.part.3" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.ImplementationExample" label="%implementation.part.title"/>
           </children>
           <children xsi:type="basic:PartStack" xmi:id="_Lz1tcEKoEeK83uHYmuE7sQ" elementId="com.beone.e4.translation.partstack.5">
-            <children xsi:type="basic:Part" xmi:id="_MkiKkEKoEeK83uHYmuE7sQ" elementId="com.beone.e4.translation.part.5" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.FragmentExample" label="Fragment ResourceBundle"/>
+            <children xsi:type="basic:Part" xmi:id="_MkiKkEKoEeK83uHYmuE7sQ" elementId="com.beone.e4.translation.part.5" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.parts.FragmentExample" label="%fragment.part.title"/>
           </children>
         </children>
       </children>
     </children>
-    <mainMenu xmi:id="_WdKV4KgcEeK5kJWEPbQIog" elementId="com.beone.e4.translation.menu.0"/>
+    <mainMenu xmi:id="_WdKV4KgcEeK5kJWEPbQIog" elementId="com.beone.e4.translation.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_TkLHwF2QEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.menu.1" label="%menu.file.label" tooltip="%menu.file.tooltip">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Kk97oF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.0" label="%file.command.open" tooltip="%file.command.open" command="_810rEF2QEeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_7BOrgF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.2" label="%file.command.save" tooltip="%file.command.save" command="_BbM6wF2REeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_-JqcEF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.menuseparator.0"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_-97xoF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.3" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_qehjoF2QEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.menu.2" label="%menu.edit.label" tooltip="%menu.edit.tooltip">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_SgmVcF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.1" label="%edit.command.copy" tooltip="%edit.command.copy" command="_EpvTUF2REeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_BabCMF2SEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.handledmenuitem.4" label="%edit.command.paste" tooltip="%edit.command.paste" command="_GRpFQF2REeO9v_Lq7wc4oQ"/>
+      </children>
+      <children xsi:type="menu:DirectMenuItem" xmi:id="_etfSoF2dEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.directmenuitem.0" label="%menu.about.label" tooltip="%menu.about.tooltip"/>
+    </mainMenu>
     <trimBars xmi:id="_jN3TIKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_oGOJMKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.toolbar.0">
         <children xsi:type="menu:ToolControl" xmi:id="_pUO0cKgaEeK5kJWEPbQIog" elementId="com.beone.e4.translation.toolcontrol.0" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.control.LocaleChangeItem"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_CA6-gF2zEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.directtoolitem.0" label="%window.toolbar.command.label" tooltip="%window.toolbar.command.tooltip" contributionURI="bundleclass://com.beone.e4.translation/com.beone.e4.translation.control.LocaleSwitchHandler"/>
       </children>
     </trimBars>
   </children>
+  <commands xmi:id="_810rEF2QEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.0" commandName="%file.command.open"/>
+  <commands xmi:id="_BbM6wF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.1" commandName="%file.command.save"/>
+  <commands xmi:id="_DBhYUF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.2" commandName="%file.command.exit"/>
+  <commands xmi:id="_EpvTUF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.3" commandName="%edit.command.copy"/>
+  <commands xmi:id="_GRpFQF2REeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.4" commandName="%edit.command.paste"/>
+  <commands xmi:id="_i-c24F2wEeO9v_Lq7wc4oQ" elementId="com.beone.e4.translation.command.5" commandName="%osgi.part.viewmenu.command.label"/>
   <addons xmi:id="_pliMEkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_pliME0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_pliMFEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
