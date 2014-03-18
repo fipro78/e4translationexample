@@ -34,8 +34,9 @@ public class LocaleChangeItem {
 		final Text input = new Text(parent, SWT.BORDER);
 		input.addKeyListener(new KeyAdapter() {
 			@Override
-			public void keyPressed(KeyEvent e) {
-				if (e.keyCode == 13) {
+			public void keyPressed(KeyEvent event) {
+				if (event.keyCode == SWT.CR
+						|| event.keyCode == SWT.KEYPAD_CR) {
 					lcs.changeApplicationLocale(input.getText());
 				}
 			}
@@ -52,6 +53,8 @@ public class LocaleChangeItem {
 
 	@Inject
 	public void translate(@Translation OsgiMessages messages) {
-		LocalizationHelper.updateButtonText(button, messages.button_change_locale);
+		//button localization via Eclipse Translation Pattern
+		LocalizationHelper.updateButtonText(
+				button, messages.button_change_locale);
 	}
 }

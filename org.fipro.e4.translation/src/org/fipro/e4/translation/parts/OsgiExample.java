@@ -3,11 +3,13 @@ package org.fipro.e4.translation.parts;
 import java.util.Locale;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.core.services.nls.ILocaleChangeService;
 import org.eclipse.e4.core.services.nls.Translation;
+import org.eclipse.e4.core.services.translation.TranslationService;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.swt.SWT;
@@ -56,7 +58,13 @@ public class OsgiExample {
 	
 	@Inject
 	@Optional
+	private void getNotified(@Named(TranslationService.LOCALE) String s) {
+		System.out.println("Injected via context: " + s);
+	} 
+	
+	@Inject
+	@Optional
 	private void getNotified(@UIEventTopic(ILocaleChangeService.LOCALE_CHANGE) Locale s) {
-		System.out.println(s);
+		System.out.println("Injected via event broker: " + s);
 	} 
 }
