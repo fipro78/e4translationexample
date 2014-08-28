@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 
 import org.eclipse.e4.core.services.nls.Message;
 
-@Message(contributorURI="platform:/fragment/org.fipro.e4.translation.fragment")
+@Message(contributionURI="platform:/fragment/org.fipro.e4.translation.fragment")
 public class FragmentMessages {
 
 	public String first_label_message;

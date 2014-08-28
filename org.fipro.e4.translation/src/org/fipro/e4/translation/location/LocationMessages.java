@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 
 import org.eclipse.e4.core.services.nls.Message;
 
-@Message(contributorURI="platform:/plugin/org.fipro.e4.translation/resources/another")
+@Message(contributionURI="platform:/plugin/org.fipro.e4.translation/resources/another")
 public class LocationMessages {
 
 	public String first_label_message;

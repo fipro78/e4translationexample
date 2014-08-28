@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 
 import org.eclipse.e4.core.services.nls.Message;
 
-@Message(contributorURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.resources.MockBundle")
+@Message(contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.resources.MockBundle")
 public class ImplementationMessages {
 
 	public String first_label_message;
