@@ -15,6 +15,10 @@
                name="%application"
                value="org.fipro.e4.translation">
          </property>
+         <property
+               name="appName"
+               value="org.fipro.e4.translation">
+         </property>
       </product>
    </extension>
 
