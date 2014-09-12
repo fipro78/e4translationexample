@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_pliMEEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ide.application">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_pliMEUBtEeK0SbdJCOFnRw" label="%application" width="800" height="600">
+  <children xsi:type="basic:Window" xmi:id="_SCo6UDpMEeSkpcETZ_qSDA" elementId="org.fipro.e4.translation.window.additional" label="%application" x="1025" y="350" width="400" height="200"/>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_pliMEUBtEeK0SbdJCOFnRw" elementId="org.fipro.e4.translation.window.main" label="%application" x="0" y="0" width="1024" height="768">
     <children xsi:type="basic:PartSashContainer" xmi:id="_Hy6vsEB5EeK0SbdJCOFnRw" elementId="org.fipro.e4.translation.partsashcontainer.3" horizontal="true">
       <children xsi:type="basic:PartSashContainer" xmi:id="_N97LUEB3EeK0SbdJCOFnRw" elementId="org.fipro.e4.translation.partsashcontainer.0">
         <children xsi:type="basic:PartSashContainer" xmi:id="_RLTtUEB3EeK0SbdJCOFnRw" elementId="org.fipro.e4.translation.partsashcontainer.1" horizontal="true">
@@ -11,7 +12,7 @@
                 <children xsi:type="menu:HandledMenuItem" xmi:id="_vjBVQF2xEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.6" label="%osgi.part.viewmenu.command.label" command="_i-c24F2wEeO9v_Lq7wc4oQ"/>
               </menus>
               <toolbar xmi:id="_XzM_8C61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.toolbar.1">
-                <children xsi:type="menu:HandledToolItem" xmi:id="_Y3fHcC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.filecommandexit" label="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+                <children xsi:type="menu:HandledToolItem" xmi:id="_Y3fHcC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.filecommandexit" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
               </toolbar>
             </children>
           </children>
@@ -50,25 +51,25 @@
     </mainMenu>
     <trimBars xmi:id="_jN3TIKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_oGOJMKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolbar.0">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_8AKhYC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.exit" label="%file.command.exit" command="_ZgbhUC62EeSn6ZsBDQTJYw"/>
         <children xsi:type="menu:ToolControl" xmi:id="_pUO0cKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolcontrol.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleChangeItem"/>
         <children xsi:type="menu:DirectToolItem" xmi:id="_CA6-gF2zEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.directtoolitem.0" label="%window.toolbar.command.label" tooltip="%window.toolbar.command.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleSwitchHandler"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_4ALoUC62EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.directtoolitem.exitDirect" label="%file.command.exit" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8AKhYC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.exit" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
       </children>
     </trimBars>
   </children>
-  <handlers xmi:id="_aWUAcC62EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handler.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler" command="_ZgbhUC62EeSn6ZsBDQTJYw"/>
+  <handlers xmi:id="_n-kJoDpNEeSkpcETZ_qSDA" elementId="org.fipro.e4.translation.handler.1" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
   <commands xmi:id="_810rEF2QEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.0" commandName="%file.command.open"/>
   <commands xmi:id="_BbM6wF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.1" commandName="%file.command.save"/>
   <commands xmi:id="_DBhYUF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.2" commandName="%file.command.exit"/>
   <commands xmi:id="_EpvTUF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.3" commandName="%edit.command.copy"/>
   <commands xmi:id="_GRpFQF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.4" commandName="%edit.command.paste"/>
   <commands xmi:id="_i-c24F2wEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.5" commandName="%osgi.part.viewmenu.command.label"/>
-  <commands xmi:id="_ZgbhUC62EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.command.test" commandName="Test"/>
   <addons xmi:id="_pliMEkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_pliME0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_pliMFEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
   <addons xmi:id="_pliMFUBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
   <addons xmi:id="_pliMFkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_pliMF0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_6ubiEDpNEeSkpcETZ_qSDA" elementId="org.fipro.e4.translation.addon.0" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_aRxH0DpgEeSkpcETZ_qSDA" elementId="org.fipro.e4.translation.addon.1" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.WindowCloseListenerAddon"/>
 </application:Application>
