@@ -54,6 +54,7 @@
         <children xsi:type="menu:ToolControl" xmi:id="_pUO0cKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolcontrol.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleChangeItem"/>
         <children xsi:type="menu:DirectToolItem" xmi:id="_CA6-gF2zEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.directtoolitem.0" label="%window.toolbar.command.label" tooltip="%window.toolbar.command.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleSwitchHandler"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_8AKhYC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.exit" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_trHSAD8JEeSQHOZzVaJWaA" elementId="org.fipro.e4.translation.directtoolitem.windowtoolbarcommandaddwindow" label="%window.toolbar.command.addwindow" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.WindowAddHandler"/>
       </children>
     </trimBars>
   </children>
