@@ -58,13 +58,13 @@ public class OsgiExample {
 	
 	@Inject
 	@Optional
-	private void getNotified(@Named(TranslationService.LOCALE) String s) {
+	private void getNotifiedByInjection(@Named(TranslationService.LOCALE) Locale s) {
 		System.out.println("Injected via context: " + s);
 	} 
 	
 	@Inject
 	@Optional
-	private void getNotified(@UIEventTopic(ILocaleChangeService.LOCALE_CHANGE) Locale s) {
+	private void getNotifiedByEvent(@UIEventTopic(ILocaleChangeService.LOCALE_CHANGE) Locale s) {
 		System.out.println("Injected via event broker: " + s);
 	} 
 }
