@@ -25,5 +25,5 @@ Require-Bundle: javax.annotation,
  org.eclipse.e4.ui.bindings,
  org.eclipse.e4.ui.model.workbench,
  org.eclipse.osgi.services
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Localization: OSGI-INF/l10n/bundle

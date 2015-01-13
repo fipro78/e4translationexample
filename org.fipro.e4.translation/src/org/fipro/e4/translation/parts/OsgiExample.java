@@ -2,21 +2,19 @@ package org.fipro.e4.translation.parts;
 
 import java.util.Locale;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.core.services.nls.ILocaleChangeService;
-import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.e4.core.services.translation.TranslationService;
-import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.fipro.e4.translation.LocalizationHelper;
-import org.fipro.e4.translation.osgi.OsgiMessages;
+import org.fipro.e4.translation.registry.OsgiMessageRegistry;
 
 /**
  * Example showing the usage of the new message extension by using 
@@ -24,36 +22,21 @@ import org.fipro.e4.translation.osgi.OsgiMessages;
  */
 public class OsgiExample {
 
-	//the labels that will be localized
-	private Label myFirstLabel;
-	private Label mySecondLabel;
-	private Label myThirdLabel;
+	@Inject
+	OsgiMessageRegistry registry;
 
-	//create the label instances in the constructor because
-	//the method injection is executed before @PostConstruct
-	@Inject
-	public OsgiExample(Composite parent, IEclipseContext context) {
-		myFirstLabel = new Label(parent, SWT.WRAP);
-		mySecondLabel = new Label(parent, SWT.NONE);
-		myThirdLabel = new Label(parent, SWT.NONE);
-	}
-	
-	//the method that will perform the dynamic locale changes
-	@Inject
-	public void translate(@Translation OsgiMessages messages) {
-		LocalizationHelper.updateLabelText(
-				myFirstLabel, messages.firstLabelMessage);
-		LocalizationHelper.updateLabelText(
-				mySecondLabel, messages.secondLabelMessage);
-		LocalizationHelper.updateLabelText(
-				myThirdLabel, messages.third_label_message);
-	}
-	
-	@Focus
-	public void onFocus() {
-		if (myFirstLabel != null) {
-			myFirstLabel.setFocus();
-		}
+	@PostConstruct
+	public void init(Composite parent, IEclipseContext context) {
+		Label myFirstLabel = new Label(parent, SWT.WRAP);
+		Label mySecondLabel = new Label(parent, SWT.NONE);
+		Label myThirdLabel = new Label(parent, SWT.NONE);
+		
+		// bind myFirstLabel via method reference
+		registry.register(myFirstLabel::setText, (m) -> m.firstLabelMessage);
+		// bind mySecondLabel via method name
+		registry.register(mySecondLabel, "setText", "secondLabelMessage");
+		// bind myThirdLabel via property name
+		registry.registerProperty(myThirdLabel, "text", "third_label_message");
 	}
 	
 	@Inject

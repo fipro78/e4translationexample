@@ -3,39 +3,27 @@ package org.fipro.e4.translation.parts;
 
 import javax.inject.Inject;
 
-import org.eclipse.e4.core.services.nls.Translation;
-import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.fipro.e4.translation.LocalizationHelper;
-import org.fipro.e4.translation.implementation.ImplementationMessages;
+import org.fipro.e4.translation.registry.ImplementationMessageRegistry;
 
 public class ImplementationExample {
 	
-	private Label myFirstLabel;
-	private Label mySecondLabel;
-	private Label myThirdLabel;
+	@Inject
+	ImplementationMessageRegistry registry;
 
 	@Inject
 	public ImplementationExample(Composite parent) {
-		myFirstLabel = new Label(parent, SWT.WRAP);
-		mySecondLabel = new Label(parent, SWT.NONE);
-		myThirdLabel = new Label(parent, SWT.NONE);
-	}
-	
-	@Inject
-	public void translate(@Translation ImplementationMessages messages) {
-		LocalizationHelper.updateLabelText(myFirstLabel, messages.first_label_message);
-		LocalizationHelper.updateLabelText(mySecondLabel, messages.second_label_message);
-		LocalizationHelper.updateLabelText(myThirdLabel, messages.third_label_message);
-	}
-	
-	@Focus
-	public void onFocus() {
-		if (myFirstLabel != null) {
-			myFirstLabel.setFocus();
-		}
-	}
+		Label myFirstLabel = new Label(parent, SWT.WRAP);
+		Label mySecondLabel = new Label(parent, SWT.NONE);
+		Label myThirdLabel = new Label(parent, SWT.NONE);
 
+		// bind myFirstLabel via method reference
+		registry.register(myFirstLabel::setText, (m) -> m.first_label_message);
+		// bind mySecondLabel via method name
+		registry.register(mySecondLabel, "setText", "second_label_message");
+		// bind myThirdLabel via property name
+		registry.registerProperty(myThirdLabel, "text", "third_label_message");
+	}
 }

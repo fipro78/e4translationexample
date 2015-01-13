@@ -3,7 +3,6 @@ package org.fipro.e4.translation.control;
 import javax.inject.Inject;
 
 import org.eclipse.e4.core.services.nls.ILocaleChangeService;
-import org.eclipse.e4.core.services.nls.Translation;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyAdapter;
 import org.eclipse.swt.events.KeyEvent;
@@ -12,8 +11,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
-import org.fipro.e4.translation.LocalizationHelper;
-import org.fipro.e4.translation.osgi.OsgiMessages;
+import org.fipro.e4.translation.registry.OsgiMessageRegistry;
 
 /**
  * Item that is added as a ToolControl to the TrimBar of the
@@ -23,10 +21,11 @@ import org.fipro.e4.translation.osgi.OsgiMessages;
  */
 public class LocaleChangeItem {
 
-	Button button;
-	
 	@Inject
 	ILocaleChangeService lcs;
+
+	@Inject
+	OsgiMessageRegistry registry;
 	
 	@Inject
 	public LocaleChangeItem(Composite parent) {
@@ -42,19 +41,14 @@ public class LocaleChangeItem {
 			}
 		});
 	
-		button = new Button(parent, SWT.PUSH);
+		Button button = new Button(parent, SWT.PUSH);
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				lcs.changeApplicationLocale(input.getText());
 			};
 		});
-	}
-
-	@Inject
-	public void translate(@Translation OsgiMessages messages) {
-		//button localization via Eclipse Translation Pattern
-		LocalizationHelper.updateButtonText(
-				button, messages.button_change_locale);
+		
+		registry.register(button::setText, (m) -> m.buttonChangeLocale);
 	}
 }

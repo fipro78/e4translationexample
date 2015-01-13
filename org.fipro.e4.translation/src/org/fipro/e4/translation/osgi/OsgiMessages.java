@@ -9,7 +9,7 @@ public class OsgiMessages {
 	public String firstLabelMessage;
 	public String secondLabelMessage;
 	public String third_label_message;
-	public String button_change_locale;
+	public String buttonChangeLocale;
 	
 	@PostConstruct
 	public void format() {
