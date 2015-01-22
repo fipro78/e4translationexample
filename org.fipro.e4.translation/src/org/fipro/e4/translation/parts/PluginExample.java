@@ -1,6 +1,7 @@
  
 package org.fipro.e4.translation.parts;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.eclipse.swt.SWT;
@@ -13,8 +14,8 @@ public class PluginExample {
 	@Inject
 	PluginMessageRegistry registry;
 
-	@Inject
-	public PluginExample(Composite parent) {
+	@PostConstruct
+	public void init(Composite parent) {
 		Label myFirstLabel = new Label(parent, SWT.WRAP);
 		Label mySecondLabel = new Label(parent, SWT.NONE);
 		Label myThirdLabel = new Label(parent, SWT.NONE);

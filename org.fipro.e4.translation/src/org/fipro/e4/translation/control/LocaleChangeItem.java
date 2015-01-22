@@ -25,10 +25,7 @@ public class LocaleChangeItem {
 	ILocaleChangeService lcs;
 
 	@Inject
-	OsgiMessageRegistry registry;
-	
-	@Inject
-	public LocaleChangeItem(Composite parent) {
+	public LocaleChangeItem(Composite parent, OsgiMessageRegistry registry) {
 		
 		final Text input = new Text(parent, SWT.BORDER);
 		input.addKeyListener(new KeyAdapter() {

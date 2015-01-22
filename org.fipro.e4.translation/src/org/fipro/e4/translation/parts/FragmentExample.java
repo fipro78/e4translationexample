@@ -1,7 +1,7 @@
  
 package org.fipro.e4.translation.parts;
 
-import javax.inject.Inject;
+import javax.annotation.PostConstruct;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -10,11 +10,8 @@ import org.fipro.e4.translation.registry.FragmentMessageRegistry;
 
 public class FragmentExample {
 	
-	@Inject
-	FragmentMessageRegistry registry;
-
-	@Inject
-	public FragmentExample(Composite parent) {
+	@PostConstruct
+	public void init(Composite parent, FragmentMessageRegistry registry) {
 		Label myFirstLabel = new Label(parent, SWT.WRAP);
 		Label mySecondLabel = new Label(parent, SWT.NONE);
 		Label myThirdLabel = new Label(parent, SWT.NONE);

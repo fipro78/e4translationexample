@@ -14,10 +14,7 @@ import org.fipro.e4.translation.registry.LocationMessageRegistry;
 public class LocationExample {
 	
 	@Inject
-	LocationMessageRegistry registry;
-
-	@Inject
-	public LocationExample(Composite parent) {
+	public LocationExample(Composite parent, LocationMessageRegistry registry) {
 		Label myFirstLabel = new Label(parent, SWT.WRAP);
 		Label mySecondLabel = new Label(parent, SWT.NONE);
 		Label myThirdLabel = new Label(parent, SWT.NONE);

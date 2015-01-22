@@ -11,10 +11,7 @@ import org.fipro.e4.translation.registry.ImplementationMessageRegistry;
 public class ImplementationExample {
 	
 	@Inject
-	ImplementationMessageRegistry registry;
-
-	@Inject
-	public ImplementationExample(Composite parent) {
+	public ImplementationExample(Composite parent, ImplementationMessageRegistry registry) {
 		Label myFirstLabel = new Label(parent, SWT.WRAP);
 		Label mySecondLabel = new Label(parent, SWT.NONE);
 		Label myThirdLabel = new Label(parent, SWT.NONE);
