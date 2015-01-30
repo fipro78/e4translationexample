@@ -1,5 +1,6 @@
 package org.fipro.e4.translation.control;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.eclipse.e4.core.services.nls.ILocaleChangeService;
@@ -24,8 +25,8 @@ public class LocaleChangeItem {
 	@Inject
 	ILocaleChangeService lcs;
 
-	@Inject
-	public LocaleChangeItem(Composite parent, OsgiMessageRegistry registry) {
+	@PostConstruct
+	public void postConstruct(Composite parent, OsgiMessageRegistry registry) {
 		
 		final Text input = new Text(parent, SWT.BORDER);
 		input.addKeyListener(new KeyAdapter() {

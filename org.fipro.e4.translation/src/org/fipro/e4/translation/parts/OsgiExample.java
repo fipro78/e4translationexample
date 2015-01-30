@@ -6,7 +6,6 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.core.services.nls.ILocaleChangeService;
 import org.eclipse.e4.core.services.translation.TranslationService;
@@ -26,7 +25,7 @@ public class OsgiExample {
 	OsgiMessageRegistry registry;
 
 	@PostConstruct
-	public void init(Composite parent, IEclipseContext context) {
+	public void init(Composite parent) {
 		Label myFirstLabel = new Label(parent, SWT.WRAP);
 		Label mySecondLabel = new Label(parent, SWT.NONE);
 		Label myThirdLabel = new Label(parent, SWT.NONE);
