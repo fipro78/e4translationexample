@@ -6,14 +6,21 @@
         <children xsi:type="basic:PartSashContainer" xmi:id="_rKo8wFu6EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.partsashcontainer.4" horizontal="true">
           <children xsi:type="basic:PartStack" xmi:id="_oZ2asFu7EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.partstack.6">
             <children xsi:type="advanced:Placeholder" xmi:id="_mh2zwFu6EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.placeholder.0" ref="_k3zXoFu4EeSn4JBhuQmQvw"/>
-            <children xsi:type="advanced:Placeholder" xmi:id="_u7-gYFu6EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.placeholder.1" ref="_F6Bl8Fu6EeSn4JBhuQmQvw"/>
+            <children xsi:type="advanced:Placeholder" xmi:id="_u7-gYFu6EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.placeholder.1" ref="_F6Bl8Fu6EeSn4JBhuQmQvw" closeable="true"/>
           </children>
         </children>
         <windows xmi:id="_QNItIFu9EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.window.additionalwindowperspectivesubwindowtitle" label="%additional.window.perspective.subwindow.title" x="1025" y="650" width="400" height="100"/>
       </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_OFPaIK3bEeSPzO_yDAZIIg" elementId="org.fipro.e4.translation.perspective.test" label="Test">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_RHwI4K3bEeSPzO_yDAZIIg" elementId="org.fipro.e4.translation.partsashcontainer.5">
+          <children xsi:type="basic:PartStack" xmi:id="_R8KoYK3bEeSPzO_yDAZIIg" elementId="org.fipro.e4.translation.partstack.7">
+            <children xsi:type="advanced:Placeholder" xmi:id="_Sl4TwK3bEeSPzO_yDAZIIg" elementId="org.fipro.e4.translation.placeholder.2" ref="_k3zXoFu4EeSn4JBhuQmQvw"/>
+          </children>
+        </children>
+      </children>
     </children>
     <windows xmi:id="_W8Z28Fu8EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.window.additionalwindowsubwindowtitle" label="%additional.window.subwindow.title" x="1025" y="550" width="400" height="100"/>
-    <sharedElements xsi:type="basic:Part" xmi:id="_k3zXoFu4EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.part.6" label="%additional.window.shared.one.title"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_k3zXoFu4EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.part.6" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.parts.SharedElementsPart" label="%additional.window.shared.one.title"/>
     <sharedElements xsi:type="basic:Part" xmi:id="_F6Bl8Fu6EeSn4JBhuQmQvw" elementId="org.fipro.e4.translation.part.7" label="%additional.window.shared.two.title"/>
   </children>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_pliMEUBtEeK0SbdJCOFnRw" elementId="org.fipro.e4.translation.window.main" label="%application" x="0" y="0" width="1024" height="768">
