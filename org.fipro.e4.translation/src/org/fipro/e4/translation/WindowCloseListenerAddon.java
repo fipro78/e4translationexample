@@ -2,14 +2,19 @@ package org.fipro.e4.translation;
 
 import javax.inject.Inject;
 
+import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.e4.ui.model.application.MApplication;
 import org.eclipse.e4.ui.model.application.ui.basic.MWindow;
+import org.eclipse.e4.ui.model.application.ui.basic.impl.BasicPackageImpl;
 import org.eclipse.e4.ui.workbench.IWorkbench;
 import org.eclipse.e4.ui.workbench.UIEvents;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.e4.ui.workbench.modeling.IWindowCloseHandler;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.osgi.service.event.Event;
@@ -17,6 +22,7 @@ import org.osgi.service.event.Event;
 // @PostConstruct will not work as workbench gets instantiated after the processing of the add-ons
 // hence this approach uses method injection
 
+@SuppressWarnings("restriction")
 public class WindowCloseListenerAddon {
 
 	@Inject
@@ -80,7 +86,25 @@ public class WindowCloseListenerAddon {
 				}
 			};
 			
-			window.getContext().set(IWindowCloseHandler.class, closeHandler);
+			// Mostly MWindow contexts are lazily created by renderers
+			// therefore it does not need to be set already at this point
+			if (window.getContext() != null) {
+				window.getContext().set(IWindowCloseHandler.class, closeHandler);
+			}
+			else {
+				((EObject) window).eAdapters().add(new AdapterImpl() {
+					@Override
+					public void notifyChanged(Notification notification) {
+						if (notification.getFeatureID(MWindow.class) != BasicPackageImpl.WINDOW__CONTEXT) {
+							return;
+						}
+						IEclipseContext windowContext = (IEclipseContext) notification.getNewValue();
+						if (windowContext != null) {
+							windowContext.set(IWindowCloseHandler.class, closeHandler);
+						}
+					}
+				});
+			}
 		}
 	}
 }

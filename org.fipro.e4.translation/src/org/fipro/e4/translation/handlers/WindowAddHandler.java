@@ -1,5 +1,5 @@
  
-package org.fipro.e4.translation.control;
+package org.fipro.e4.translation.handlers;
 
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.model.application.MApplication;

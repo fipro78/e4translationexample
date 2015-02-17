@@ -74,19 +74,25 @@
     <trimBars xmi:id="_jN3TIKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_oGOJMKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolbar.0">
         <children xsi:type="menu:ToolControl" xmi:id="_pUO0cKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolcontrol.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleChangeItem"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_CA6-gF2zEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.directtoolitem.0" label="%window.toolbar.command.label" tooltip="%window.toolbar.command.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.LocaleSwitchHandler"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Cz03gLazEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.handledtoolitem.windowtoolbarcommandlabel" label="%window.toolbar.command.label" tooltip="%window.toolbar.command.tooltip" command="_vXFyALayEeS1aPfI59VsTA"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_8AKhYC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.exit" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
-        <children xsi:type="menu:DirectToolItem" xmi:id="_trHSAD8JEeSQHOZzVaJWaA" elementId="org.fipro.e4.translation.directtoolitem.windowtoolbarcommandaddwindow" label="%window.toolbar.command.addwindow" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.control.WindowAddHandler"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_trHSAD8JEeSQHOZzVaJWaA" elementId="org.fipro.e4.translation.directtoolitem.windowtoolbarcommandaddwindow" label="%window.toolbar.command.addwindow" tooltip="%window.toolbar.command.addwindow.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.WindowAddHandler"/>
       </children>
     </trimBars>
   </children>
   <handlers xmi:id="_n-kJoDpNEeSkpcETZ_qSDA" elementId="org.fipro.e4.translation.handler.1" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+  <handlers xmi:id="_xojeULayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.handler.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.LocaleSwitchHandler" command="_vXFyALayEeS1aPfI59VsTA"/>
+  <bindingTables xmi:id="_VMwMELayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.bindingtable.0" bindingContext="_ELpbgLayEeS1aPfI59VsTA">
+    <bindings xmi:id="_Xz2KILayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.keybinding.0" keySequence="M3+L" command="_vXFyALayEeS1aPfI59VsTA"/>
+  </bindingTables>
+  <rootContext xmi:id="_ELpbgLayEeS1aPfI59VsTA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="Dialogs &amp; Windows"/>
   <commands xmi:id="_810rEF2QEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.0" commandName="%file.command.open"/>
   <commands xmi:id="_BbM6wF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.1" commandName="%file.command.save"/>
   <commands xmi:id="_DBhYUF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.2" commandName="%file.command.exit"/>
   <commands xmi:id="_EpvTUF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.3" commandName="%edit.command.copy"/>
   <commands xmi:id="_GRpFQF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.4" commandName="%edit.command.paste"/>
   <commands xmi:id="_i-c24F2wEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.5" commandName="%osgi.part.viewmenu.command.label"/>
+  <commands xmi:id="_vXFyALayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.command.windowtoolbarcommandlabel" commandName="%window.toolbar.command.label"/>
   <addons xmi:id="_pliMEkBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_pliME0BtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_pliMFEBtEeK0SbdJCOFnRw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
