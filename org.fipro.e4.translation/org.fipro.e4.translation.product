@@ -102,6 +102,8 @@
    <features>
       <feature id="org.fipro.e4.translation.feature"/>
       <feature id="org.eclipse.e4.rcp"/>
+      <feature id="org.eclipse.emf.ecore"/>
+      <feature id="org.eclipse.emf.common"/>
    </features>
 
    <configurations>

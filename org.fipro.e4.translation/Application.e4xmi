@@ -34,7 +34,8 @@
                 <children xsi:type="menu:HandledMenuItem" xmi:id="_vjBVQF2xEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.6" label="%osgi.part.viewmenu.command.label" command="_i-c24F2wEeO9v_Lq7wc4oQ"/>
               </menus>
               <toolbar xmi:id="_XzM_8C61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.toolbar.1">
-                <children xsi:type="menu:HandledToolItem" xmi:id="_Y3fHcC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.filecommandexit" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+                <children xsi:type="menu:HandledToolItem" xmi:id="_Y3fHcC61EeSn6ZsBDQTJYw" elementId="org.fipro.e4.translation.handledtoolitem.filecommandexit" label="" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+                <children xsi:type="menu:DirectToolItem" xmi:id="_dqg_IFX-EeW0-OryzNOFVA" elementId="org.fipro.e4.translation.directtoolitem.menuaboutlabel" label="%menu.about.label" tooltip="%menu.about.tooltip"/>
               </toolbar>
             </children>
           </children>
@@ -60,16 +61,17 @@
     </children>
     <mainMenu xmi:id="_WdKV4KgcEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.menu.0">
       <children xsi:type="menu:Menu" xmi:id="_TkLHwF2QEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.menu.1" label="%menu.file.label" tooltip="%menu.file.tooltip">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_Kk97oF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.0" label="%file.command.open" tooltip="%file.command.open" command="_810rEF2QEeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Kk97oF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.filecommandopen" label="" tooltip="%file.command.open" command="_810rEF2QEeO9v_Lq7wc4oQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_7BOrgF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.2" label="%file.command.save" tooltip="%file.command.save" command="_BbM6wF2REeO9v_Lq7wc4oQ"/>
         <children xsi:type="menu:MenuSeparator" xmi:id="_-JqcEF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.menuseparator.0"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_-97xoF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.3" label="%file.command.exit" tooltip="%file.command.exit" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_-97xoF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.3" label="%file.command.exit" tooltip="%file.command.exit.tooltip" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
       </children>
       <children xsi:type="menu:Menu" xmi:id="_qehjoF2QEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.menu.2" label="%menu.edit.label" tooltip="%menu.edit.tooltip">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_SgmVcF2REeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.1" label="%edit.command.copy" tooltip="%edit.command.copy" command="_EpvTUF2REeO9v_Lq7wc4oQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_BabCMF2SEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.handledmenuitem.4" label="%edit.command.paste" tooltip="%edit.command.paste" command="_GRpFQF2REeO9v_Lq7wc4oQ"/>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_GT8E0FX_EeW0-OryzNOFVA" elementId="org.fipro.e4.translation.directmenuitem.menuaboutlabel" label="%menu.about.label" tooltip="%menu.about.tooltip"/>
       </children>
-      <children xsi:type="menu:DirectMenuItem" xmi:id="_etfSoF2dEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.directmenuitem.0" label="%menu.about.label" tooltip="%menu.about.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler"/>
+      <children xsi:type="menu:DirectMenuItem" xmi:id="_etfSoF2dEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.directmenuitem.menuaboutlabel" label="%menu.about.label" tooltip="%menu.about.tooltip" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.ExitHandler"/>
     </mainMenu>
     <trimBars xmi:id="_jN3TIKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.trimbar.0">
       <children xsi:type="menu:ToolBar" xmi:id="_oGOJMKgaEeK5kJWEPbQIog" elementId="org.fipro.e4.translation.toolbar.0">
@@ -84,6 +86,7 @@
   <handlers xmi:id="_xojeULayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.handler.0" contributionURI="bundleclass://org.fipro.e4.translation/org.fipro.e4.translation.handlers.LocaleSwitchHandler" command="_vXFyALayEeS1aPfI59VsTA"/>
   <bindingTables xmi:id="_VMwMELayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.bindingtable.0" bindingContext="_ELpbgLayEeS1aPfI59VsTA">
     <bindings xmi:id="_Xz2KILayEeS1aPfI59VsTA" elementId="org.fipro.e4.translation.keybinding.0" keySequence="M3+L" command="_vXFyALayEeS1aPfI59VsTA"/>
+    <bindings xmi:id="_Dl-fMFX-EeW0-OryzNOFVA" elementId="org.fipro.e4.translation.keybinding.1" keySequence="M1+Q" command="_DBhYUF2REeO9v_Lq7wc4oQ"/>
   </bindingTables>
   <rootContext xmi:id="_ELpbgLayEeS1aPfI59VsTA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="Dialogs &amp; Windows"/>
   <commands xmi:id="_810rEF2QEeO9v_Lq7wc4oQ" elementId="org.fipro.e4.translation.command.0" commandName="%file.command.open"/>
